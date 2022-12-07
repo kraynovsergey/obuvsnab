@@ -1,0 +1,32 @@
+.modal(id="modal-register")
+    .modal__title Регистрация
+
+    form.form(action="#" method="post")
+        fieldset.form__fieldset
+            input.form__input(type="text" name="fullname" placeholder="ФИО")
+
+        fieldset.form__fieldset
+            input.form__input(type="tel" name="phone" placeholder="Телефон" minlength="18" maxlength="18")
+
+        fieldset.form__fieldset
+            input.form__input(type="email" name="email" placeholder="Email")
+
+        fieldset.form__fieldset
+            input.form__input(type="password" name="password" placeholder="Пароль")
+
+        fieldset.form__fieldset
+            input.form__input(type="password" name="password_repeat" placeholder="Повторите пароль")
+
+        button.form__submit(type="submit") Зарегистрироваться
+
+.modal(id="modal-auth")
+    .modal__title Вход
+
+    form.form(action="#" method="post")
+        fieldset.form__fieldset
+            input.form__input(type="email" name="email" placeholder="Email")
+
+        fieldset.form__fieldset
+            input.form__input(type="password" name="password" placeholder="Пароль")
+
+        button.form__submit(type="submit") Войти

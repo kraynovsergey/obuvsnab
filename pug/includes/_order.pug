@@ -1,0 +1,21 @@
+section.section._pt0
+    .container
+        h3.section__h3 Данные покупателя
+
+        form.form._order(action="#" method="post")
+            fieldset.form__fieldset
+                input.form__input(type="text" name="receiver" placeholder="ФИО")
+
+            fieldset.form__fieldset
+                input.form__input(type="tel" name="phone" placeholder="Телефон" minlength="18" maxlength="18")
+
+            fieldset.form__fieldset
+                input.form__input(type="email" name="email" placeholder="Email")
+
+            fieldset.form__fieldset
+                input.form__input(type="text" name="address" placeholder="Адрес доставки")
+
+            fieldset.form__fieldset
+                input.form__input(type="text" name="message" placeholder="Комментарий к заказу")
+
+            button.form__submit(type="submit") Оформить заказ

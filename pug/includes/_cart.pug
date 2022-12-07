@@ -1,0 +1,87 @@
+section.section._pt0.cart
+    .container
+        h1.h1 Корзина
+
+        .cart__cols._header
+            .cart__col._c1 Товар
+            .cart__col._c2
+            .cart__col._c3 Цена за пару
+            .cart__col._c4 Пар в упак-ке
+            .cart__col._c5 Кол-во
+            .cart__col._c6 Цена за упак-ку
+            .cart__col._c7 Сумма
+
+        .cart__row
+            .cart__cols
+                .cart__col._c1
+                    a(href="product.html")
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/product-cart@2x.webp 2x, img/tmp/webp/product-cart.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/product-cart@2x.jpg 2x, img/tmp/product-cart.jpg 1x")
+                            img.cart__img(src="img/tmp/product-cart.jpg" alt="" width="120" height="120")
+
+                .cart__col._c2
+                    .cart__mobile-title Товар
+                    a.cart__title(href="product.html") Женские ботинки BETSY
+
+                .cart__col._c3
+                    .cart__mobile-title Цена за пару
+                    .cart__price 2 999 ₽
+
+                .cart__col._c4
+                    .cart__mobile-title Пар в упак-ке
+                    .cart__price 8 шт.
+
+                .cart__col._c5
+                    .cart__mobile-title Кол-во
+                    .product__count.cart__count
+                        button.product__count-button._minus(type="button")
+                        input.product__count-input(type="text" name="count" value="1" readonly)
+                        button.product__count-button._plus(type="button")
+
+                .cart__col._c6
+                    .cart__mobile-title Цена за упак-ку
+                    .cart__price 24 000 ₽
+
+                .cart__col._c7
+                    .cart__mobile-title Сумма
+                    .cart__price 80 000 ₽
+
+        .cart__row
+            .cart__cols
+                .cart__col._c1
+                    a(href="product.html")
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/product-cart@2x.webp 2x, img/tmp/webp/product-cart.webp 1x")
+                            source(type="image/jpeg" srcset="img/tmp/product-cart@2x.jpg 2x, img/tmp/product-cart.jpg 1x")
+                            img.cart__img(src="img/tmp/product-cart.jpg" alt="" width="120" height="120")
+
+                .cart__col._c2
+                    .cart__mobile-title Товар
+                    a.cart__title(href="product.html") Женские ботинки BETSY
+
+                .cart__col._c3
+                    .cart__mobile-title Цена за пару
+                    .cart__price 2 999 ₽
+
+                .cart__col._c4
+                    .cart__mobile-title Пар в упак-ке
+                    .cart__price 8 шт.
+
+                .cart__col._c5
+                    .cart__mobile-title Кол-во
+                    .product__count.cart__count
+                        button.product__count-button._minus(type="button")
+                        input.product__count-input(type="text" name="count" value="1" readonly)
+                        button.product__count-button._plus(type="button")
+
+                .cart__col._c6
+                    .cart__mobile-title Цена за упак-ку
+                    .cart__price 24 000 ₽
+
+                .cart__col._c7
+                    .cart__mobile-title Сумма
+                    .cart__price 80 000 ₽
+
+        .cart__total Итого:
+            .cart__price 9 999 ₽

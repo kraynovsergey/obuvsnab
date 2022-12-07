@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Корзина', description: 'Описание страницы корзины', keywords: 'Ключи страницы корзины'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            include includes/_breadcrumbs.pug
+
+            include includes/_cart.pug
+
+            include includes/_order.pug
+
+        include includes/_footer.pug
+
+        include includes/_svg.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug

@@ -1,0 +1,53 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Контакты', description: 'Описание страницы контакты', keywords: 'Ключи страницы контакты'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            include includes/_breadcrumbs.pug
+
+            section.section.columns.text.contacts._pt0
+                .container
+                    .columns__cols
+                        .columns__col
+                            h1.h1 Контакт центр
+
+                        .columns__col
+                            .contacts__block
+                                .contacts__item._gray Ежедневно с 9:00 до 22:00 по Московскому времени
+                                a.contacts__item._link(href="tel:") +7 928 800 39 04
+
+                            .contacts__block.contacts__cols
+                                .contacts__col.contacts-page__block
+                                    .contacts__item._gray Магазин №1
+                                    .contacts__item Дворянская улица, 27Ак1
+
+                                .contacts__col.contacts-page__block
+                                    .contacts__item._gray Магазин №2
+                                    .contacts__item Дворянская улица, 27Ак1
+
+                            .contacts__block
+                                .contacts__item._gray Интересующие вас вопросы Вы можете написать нам на почту
+                                a.contacts__item._link(href="mailto:") оbuvsnab@mail.ru
+
+                    .columns__cols
+                        .columns__col
+                            h2.h1 Реквизиты
+
+                        .columns__col
+                            .contacts__block
+                                .contacts__item ООО «Obuvsnab»
+                                .contacts__item ОГРН: 5374746217897
+                                .contacts__item Юр. адрес: 127236, город Москва,
+                                .contacts__item ул. Мира, д. 8, этаж 1, помещ. 3
+
+        include includes/_footer.pug
+
+        include includes/_svg.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug

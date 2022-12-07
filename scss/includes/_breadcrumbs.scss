@@ -1,0 +1,40 @@
+.breadcrumbs {
+	padding-bottom: 30px;
+
+	& ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		font-weight: 500;
+
+		& li {
+			margin-right: 10px;
+			display: flex;
+			align-items: center;
+
+			&::after {
+				content: '/';
+				color: #919191;
+				margin-left: 10px;
+			}
+
+			&:last-child {
+				&::after {
+					display: none;
+				}
+			}
+
+			& a {
+				color: #919191;
+				text-decoration: none;
+
+				&:hover {
+					color: $color_red;
+				}
+			}
+		}
+	}
+}

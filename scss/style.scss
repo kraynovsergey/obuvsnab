@@ -1,0 +1,38 @@
+$color_black: #000000;
+$color_white: #ffffff;
+$color_gray: #F2F2F2;
+$color_darkGray: #E6E6E6;
+$color_red: #D80808;
+
+$transition: 0.5s ease;
+
+@import "includes/reboot";
+@import "includes/grid";
+@import "includes/fonts";
+@import "includes/default";
+
+@import "includes/header";
+@import "includes/top";
+@import "includes/header-mobile";
+@import "includes/section";
+@import "includes/intro";
+@import "includes/product";
+@import "includes/carousel";
+@import "includes/footer";
+@import "includes/search";
+@import "includes/breadcrumbs";
+@import "includes/catalog";
+@import "includes/aside";
+@import "includes/product-page";
+@import "includes/cart";
+@import "includes/form";
+@import "includes/text";
+@import "includes/modal";
+@import "includes/columns";
+@import "includes/contacts";
+
+
+
+
+
+

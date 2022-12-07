@@ -1,0 +1,108 @@
+.top {
+	height: 60px;
+	background: $color_gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: .85rem;
+	transition: $transition;
+	position: relative;
+	z-index: 2;
+
+	@media (max-width: 991px) {
+		display: none;
+	}
+
+	&__cols {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__col {
+		&:first-child {
+			padding-right: 15px;
+		}
+
+		&:last-child {
+			padding-left: 15px;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		color: $color_black;
+
+		& li {
+			margin-right: 30px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover,
+			&._active {
+				color: $color_red;
+			}
+
+			& a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		color: #808080;
+
+		& a {
+			color: inherit;
+			text-decoration: none;
+
+			&:hover {
+				color: $color_red;
+			}
+		}
+	}
+
+	&__phone {
+		margin-right: 30px;
+	}
+
+	&__cabinet {
+		display: flex;
+		align-items: center;
+
+		& button {
+			display: flex;
+			margin-right: 10px;
+			line-height: 100%;
+
+			&::after {
+				content: '';
+				width: 1px;
+				background: #808080;
+				margin-left: 10px;
+				height: 11px;
+			}
+
+			&:last-child {
+				margin-right: 0;
+
+				&::after {
+					display: none;
+				}
+			}
+
+			&:hover {
+				color: $color_red;
+			}
+		}
+	}
+}

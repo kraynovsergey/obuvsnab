@@ -1,0 +1,253 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	background: $color_gray;
+	position: relative;
+	padding: 2px;
+	transition: $transition;
+
+	&._active {
+		z-index: 5;
+	}
+
+	&:hover {
+		background: #e6e6e6;
+
+		& .product__hidden {
+			transform: translateY(calc(100% - 15px));
+		}
+
+		& .product__img {
+			transform: scale(1.1);
+		}
+	}
+
+	&__label {
+		position: absolute;
+		z-index: 3;
+		font-family: 'Pobeda';
+		font-size: 1.14rem;
+		font-weight: bold;
+		left: 20px;
+		top: 20px;
+	}
+
+	& picture {
+		overflow: hidden;
+		display: block;
+	}
+
+	&__img {
+		max-width: 100%;
+		position: relative;
+		z-index: 2;
+		transition: $transition;
+		width: 100%;
+		height: auto;
+	}
+
+	&__content {
+		padding: 15px 15px 25px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+		background: inherit;
+		text-align: center;
+		flex-grow: 1;
+		justify-content: space-between;
+
+		&-col {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		font-size: 1.14rem;
+		margin-bottom: 8px;
+		text-transform: uppercase;
+		color: inherit !important;
+		text-decoration: none;
+
+		&::after {
+			content: '';
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+
+	&__category {
+		margin-bottom: 20px;
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.71rem;
+		font-family: 'Pobeda';
+		font-weight: bold;
+
+		@media (max-width: 575px) {
+			font-size: 1.4rem
+		}
+
+		& ._oldprice {
+			color: rgba(0,0,0,.3);
+			margin-right: 10px;
+		}
+	}
+
+	&__hidden {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: inherit;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		transition: $transition;
+		z-index: 1;
+
+		@media (max-width: 991px) {
+			display: none !important;
+		}
+	}
+
+	&__controls {
+		margin: 0 -5px;
+		display: flex;
+		padding-bottom: 15px;
+	}
+
+	&__control {
+		padding: 0 5px;
+		width: 50%;
+		height: 47px;
+		display: flex;
+	}
+
+	&__submit {
+		background: $color_black;
+		font-size: .85rem;
+		color: $color_white;
+		text-transform: uppercase;
+		width: 100%;
+
+		@media (max-width: 1199px) {
+			font-size: .7rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 1rem;
+		}
+
+		&:hover {
+			background: $color_red;
+		}
+	}
+
+	&__count {
+		display: flex;
+		border: 1px solid #c4c4c4;
+		width: 100%;
+	}
+
+	&__count-button,
+	&__count-input {
+		width: 33.33%;
+	}
+
+	&__count-input {
+		font-size: 1.14rem;
+		background: none;
+		border: 0;
+		border-radius: 0 !important;
+		text-align: center;
+		font-family: "Pobeda";
+		font-weight: bold;
+	}
+
+	&__count-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			width: 17px;
+			height: 1px;
+			background: $color_black;
+
+			@media (max-width: 1199px) {
+				width: 12px;
+			}
+		}
+
+		&._minus {
+			&::after {
+				display: none;
+			}
+		}
+
+		&._plus {
+			&::after {
+				transform: rotate(-90deg);
+			}
+
+			&::after,
+			&::before {
+				position: absolute;
+			}
+		}
+	}
+
+	&__param {
+		text-align: center;
+		color: #a1a1a1;
+
+		@media (max-width: 1199px) {
+			font-size: .85rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 1rem;
+		}
+	}
+
+	&__sizes {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -2.5px -5px;
+		padding: 8px 0;
+	}
+
+	&__size {
+		width: calc(25% - 5px);
+		margin: 0 2.5px 5px;
+		border: 1px solid rgba(0,0,0,.15);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: .85rem;
+		text-transform: uppercase;
+		height: 24px;
+
+		@media (max-width: 1199px) {
+			font-size: .65rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: .85rem;
+		}
+	}
+}

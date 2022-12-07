@@ -1,0 +1,164 @@
+.header-mobile {
+	position: fixed;
+	//background: $color_white;
+	top: 70px;
+	display: none;
+	flex-direction: column;
+	justify-content: stretch;
+	max-height: calc(100vh - 70px);
+	overflow-y: auto;
+	transition: $transition;
+	//padding: 20px 0;
+	width: 100%;
+
+	@media (max-width: 991px) {
+		display: flex;
+		left: -100%;
+
+		&._active {
+			left: 0;
+		}
+	}
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	& .container,
+	&__content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
+		background: $color_white;
+		width: 85%;
+		padding: 20px 20px 0 0;
+
+		@media (max-width: 320px) {
+			width: 90%;
+		}
+	}
+
+	&__cabinet {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 20px;
+
+		& button {
+			height: 47px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: calc(50% - 7.5px);
+			background: $color_gray;
+			color: #AAAAAA;
+			font-size: .85rem;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		& > li {
+			font-weight: 500;
+			margin-bottom: 15px;
+			font-size: 1.28rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&._active {
+				color: $color_red;
+
+				& .plus {
+					&::after {
+						opacity: 0;
+					}
+				}
+
+				& .header-mobile__sublist {
+					display: flex;
+				}
+			}
+
+			&._parent {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				flex-wrap: wrap;
+			}
+
+			& > a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+
+		&:first-child {
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+			border-bottom: 1px solid rgba(0,0,0,.3);
+		}
+	}
+
+	&__sublist {
+		width: 100%;
+		flex-direction: column;
+		margin: 0;
+		padding: 10px 0 20px 0;
+		list-style: none;
+		color: #919191;
+		display: none;
+
+		& li {
+			margin-bottom: 8px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&._active {
+				& a {
+					color: $color_red;
+				}
+			}
+
+			& a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__phone {
+		background: $color_gray;
+		display: flex;
+		align-content: flex-start;
+		flex-direction: column;
+		margin: 20px -20px 0;
+		padding: 15px 20px;
+		font-size: 1.71rem;
+		color: #808080;
+
+		& a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	&__messangers {
+		padding-top: 10px !important;
+	}
+}

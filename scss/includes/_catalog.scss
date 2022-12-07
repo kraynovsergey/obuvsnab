@@ -1,0 +1,149 @@
+.catalog {
+	&__cols {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin: 0 -7.5px;
+	}
+
+	&__col {
+		padding: 0 7.5px;
+
+		@media (max-width: 991px) {
+			width: 100% !important;
+		}
+
+		&._aside {
+			width: 25%;
+		}
+
+		&._content {
+			width: 75%;
+
+			@media (max-width: 991px) {
+				order: -1;
+			}
+		}
+	}
+
+	&__products {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -7.5px -15px;
+	}
+
+	&__product {
+		width: calc(33.33% - 15px);
+		margin: 0 7.5px 15px;
+
+		@media (max-width: 767px) {
+			width: calc(50% - 15px);
+		}
+
+		/*@media (max-width: 575px) {
+			width: 100%;
+		}*/
+	}
+
+	&__top {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		margin-bottom: 15px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+		}
+
+		& h1 {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+	}
+
+	&__sorting {
+		margin-left: 30px;
+		font-weight: 500;
+		color: rgba(0,0,0,.3);
+		text-decoration: none;
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+		top: -10px;
+
+		&:hover {
+			color: $color_red;
+
+			& .catalog__sorting-icon {
+				& span {
+					background: $color_red;
+				}
+			}
+		}
+
+		&-icon {
+			display: flex;
+			align-items: flex-end;
+			margin-left: 15px;
+
+			& span {
+				width: 2px;
+				background: rgba(0,0,0,.3);
+				margin-right: 5px;
+				position: relative;
+				top: -7px;
+
+				&:first-child {
+					height: 6px;
+				}
+
+				&:nth-child(2) {
+					height: 12px;
+				}
+
+				&:last-child {
+					height: 18px;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&__more {
+		padding: 60px 0 0;
+		display: flex;
+		justify-content: center;
+
+		@media (max-width: 991px) {
+			padding: 30px 0;
+		}
+
+		& button {
+			display: flex;
+			align-items: center;
+			color: rgba(0,0,0,.3);
+
+			&:hover {
+				color: $color_red;
+
+				& use {
+					fill: $color_red;
+				}
+
+				& svg {
+					transform: rotate(360deg);
+				}
+			}
+
+			& svg {
+				margin-right: 15px;
+				position: relative;
+				top: -2px;
+			}
+
+			& use {
+				fill: rgba(0,0,0,.3);
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	background: $color_white;
+	font-family: 'Graphik';
+	color: $color_black;
+	font-weight: normal;
+	font-style: normal;
+	overflow-x: hidden;
+}
+
+body * {
+  outline: none !important;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+a,
+svg,
+path,
+rect,
+circle,
+button,
+span,
+::before,
+::after {
+	transition: $transition;
+}
+
+button {
+	border-radius: 0;
+	-webkit-appearance: none;
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	color: inherit;
+}
+
+a {
+	color: $color_red;
+	text-decoration: underline;
+
+	&:hover {
+		color: $color_red;
+		text-decoration: none;
+	}
+}
+
+.svg {
+	display: none;
+}
+
+.main {
+	padding: 160px 0 0;
+
+	@media (max-width: 991px) {
+		padding-top: 90px;
+	}
+}
+
+h1,
+.h1 {
+	margin: 0 0 15px !important;
+	padding: 0;
+	font-family: 'Pobeda';
+	font-size: 2.57rem !important;
+	font-weight: bold;
+
+	@media (max-width: 991px) {
+		margin-bottom: 10px !important;
+		font-size: 2.2rem !important;
+	}
+
+	& span {
+		color: rgba(0,0,0,.3);
+		margin-left: 10px;
+	}
+}
+
+.plus {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 17px;
+	height: 17px;
+	top: -3px;
+	cursor: pointer;
+
+	&:hover {
+		&::after,
+		&::before {
+			background: $color_red;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		width: 17px;
+		height: 1px;
+		background: #919191;
+		position: absolute;
+	}
+
+	&::after {
+		transform: rotate(90deg);
+	}
+}

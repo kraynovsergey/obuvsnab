@@ -1,0 +1,43 @@
+doctype html
+html(lang="ru")
+    head
+    - var seo = {title: 'Производство', description: 'Описание страницы производство', keywords: 'Ключи страницы производство'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            include includes/_breadcrumbs.pug
+
+            section.section.columns.text._pt0
+                .container
+                    picture
+                        source(type="image/webp" srcset="img/tmp/webp/manufacture-big@2x.webp 2x, img/tmp/webp/manufacture-big.webp 1x")
+                        source(type="image/jpg" srcset="img/tmp/manufacture-big@2x.jpg 2x, img/tmp/manufacture-big.jpg 1x")
+                        img.text__img._mb50(src="img/tmp/manufacture-big.jpg" alt="" width="1128" height="400")
+
+                    .columns__cols
+                        .columns__col
+                            h1.h1 Производство
+
+                        .columns__col
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    .columns__cols
+                        .columns__col
+                            picture
+                                source(type="image/webp" srcset="img/tmp/webp/manufacture-small@2x.webp 2x, img/tmp/webp/manufacture-small.webp 1x")
+                                source(type="image/jpg" srcset="img/tmp/manufacture-small@2x.jpg 2x, img/tmp/manufacture-small.jpg 1x")
+                                img.text__img(src="img/tmp/manufacture-small.jpg" alt="" width="504" height="284")
+
+                        .columns__col
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        include includes/_footer.pug
+
+        include includes/_svg.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug

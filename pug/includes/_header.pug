@@ -1,0 +1,183 @@
+header.header
+    .top
+        .container.top__cols
+            nav.top__col
+                ul.top__nav
+                    li
+                        a(href="manufacture.html") О производстве
+                    li
+                        a(href="payment.html") Оплата
+                    li
+                        a(href="text.html") Доставка
+                    li
+                        a(href="contacts.html") Контакты
+
+            .top__col.top__controls
+                a.top__phone(href="tel:") +7 928 800 39 04
+
+                .top__cabinet
+                    button(type="button" data-fancybox data-src="#modal-auth") Вход
+                    button(type="button" data-fancybox data-src="#modal-register") Регистрация
+
+    .container.header__container
+        .header__cols
+            .header__col._controls._mobile
+                button.header__burger(type="button")
+                    span
+                    span
+                    span
+
+            .header__col._logo
+                a.header__logo(href="index.html")
+                    svg(width="275" height="25" viewBox="0 0 275 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-logo")
+                    svg._mobile(width="152" height="37" viewBox="0 0 152 37" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="#svg-logo-mobile")
+
+            .header__col._controls
+                nav
+                    ul.header__nav
+                        li
+                            a(href="catalog.html") Каталог
+                        li
+                            a(href="catalog.html") Кросовки
+                        li
+                            a(href="catalog.html") Классика
+                        li
+                            a(href="catalog.html") Демисезон
+
+                .header__controls
+                    button.header__search(type="button")
+                        svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-search")
+
+                    a.header__cart(href="cart.html")
+                        svg(width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-cart")
+                        span 23
+
+    .header-mobile
+        .container
+            .header-mobile__content
+                .header-mobile__cabinet
+                    button(type="button" data-fancybox data-src="#modal-auth") Вход
+                    button(type="button" data-fancybox data-src="#modal-register") Регистрация
+
+                nav
+                    ul.header-mobile__nav.dropdown
+                        li
+                            a(href="catalog.html") Каталог
+                        li._parent
+                            a(href="catalog.html") Кросовки
+                            span.plus
+                            ul.header-mobile__sublist
+                                li
+                                    a(href="catalog.html") Женские кросовки
+                                li
+                                    a(href="catalog.html") Мужские кросовки
+                        li._parent
+                            a(href="catalog.html") Классика
+                            span.plus
+                            ul.header-mobile__sublist
+                                li
+                                    a(href="catalog.html") Женские кросовки
+                                li
+                                    a(href="catalog.html") Мужские кросовки
+                        li._parent
+                            a(href="catalog.html") Демисезон
+                            span.plus
+                            ul.header-mobile__sublist
+                                li
+                                    a(href="catalog.html") Женские кросовки
+                                li
+                                    a(href="catalog.html") Мужские кросовки
+
+                    ul.header-mobile__nav
+                        li
+                            a(href="manufacture.html") О производстве
+                        li
+                            a(href="payment.html") Оплата
+                        li
+                            a(href="text.html") Доставка
+                        li
+                            a(href="contacts.html") Контакты
+
+                .header-mobile__phone
+                    a(href="tel:") +7 928 800 39 04
+
+                    .footer__messangers.header-mobile__messangers
+                        a(href="#" target="_blank") whatsapp
+                        a(href="#" target="_blank") telegram
+                        a(href="#" target="_blank") viber
+
+    .search
+        .search__wrap
+            .container
+                form.search__form
+                    .search__input-wrap
+                        input.search__input(type="text" name="search" placeholder="Запрос для поиска")
+
+                        svg.search__lupa(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            use(xlink:href="#svg-search")
+
+                        button.search__reset(type="reset")
+
+                    button.search__submit(type="submit") Искать
+
+
+                .search__cols
+                    .search__col._small
+                        .search__title Так же ищут
+                        .search__queries
+                            button.search__query(type="button") Nike
+                            button.search__query(type="button") Nike
+                            button.search__query(type="button") Nike
+                            button.search__query(type="button") Nike
+
+                    .search__col._big
+                        .search__title Популярное
+                        .search__products
+                            .product.search__product
+                                .product__label – 29%
+
+                                a(href="product.html")
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x")
+                                        source(type="image/jpeg" srcset="img/tmp/product@2x.jpg 2x, img/tmp/product.jpg 1x")
+                                        img.product__img(src="img/tmp/product.jpg" alt="" width="275" height="275")
+
+                                .product__content
+                                    .product__content-col
+                                        a.product__title(href="product.html") BETSY
+                                        .product__category Ботинки женские
+                                    .product__price
+                                        span._oldprice 6 999 ₽
+                                        span 4 999 ₽
+
+                            .product.search__product
+                                a(href="product.html")
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x")
+                                        source(type="image/jpeg" srcset="img/tmp/product@2x.jpg 2x, img/tmp/product.jpg 1x")
+                                        img.product__img(src="img/tmp/product.jpg" alt="" width="275" height="275")
+
+                                .product__content
+                                    .product__content-col
+                                        a.product__title(href="product.html") BETSY
+                                        .product__category Ботинки женские
+                                    .product__price
+                                        span 4 999 ₽
+
+                            .product.search__product
+                                a(href="product.html")
+                                    picture
+                                        source(type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x")
+                                        source(type="image/jpeg" srcset="img/tmp/product@2x.jpg 2x, img/tmp/product.jpg 1x")
+                                        img.product__img(src="img/tmp/product.jpg" alt="" width="275" height="275")
+
+                                .product__content
+                                    .product__content-col
+                                        a.product__title(href="product.html") BETSY
+                                        .product__category Ботинки женские
+                                    .product__price
+                                        span 4 999 ₽

@@ -1,0 +1,53 @@
+.section {
+	padding: 80px 0;
+	position: relative;
+
+	@media (max-width: 991px) {
+		padding: 50px 0;
+	}
+
+	&._pt0 {
+		padding-top: 0 !important;
+	}
+
+	&._pb0 {
+		padding-bottom: 0 !important;
+	}
+
+	&._z2 {
+		z-index: 2;
+	}
+
+	&._z1 {
+		z-index: 1;
+	}
+
+	&._z3 {
+		z-index: 3;
+	}
+
+	&__h2,
+	&__h3 {
+		padding: 0;
+		margin: 0 0 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: 'Pobeda';
+
+		&._center {
+			text-align: center;
+		}
+	}
+
+	&__h2 {
+		font-size: 2.57rem;
+
+		@media (max-width: 991px) {
+			font-size: 1.71rem;
+		}
+	}
+
+	&__h3 {
+		font-size: 2.14rem;
+	}
+}

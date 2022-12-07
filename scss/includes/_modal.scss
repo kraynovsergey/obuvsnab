@@ -1,0 +1,31 @@
+.modal {
+	display: none;
+	background: $color_white;
+	padding: 60px;
+	max-width: 470px;
+	width: 100%;
+
+	@media (max-width: 575px) {
+		padding: 30px;
+	}
+
+	& .is-close {
+		right: -10px !important;
+
+		@media (max-width: 575px) {
+			right: 0 !important;
+		}
+	}
+
+	&__title {
+		font-family: 'Pobeda';
+		font-size: 1.71rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+
+		@media (max-width: 575px) {
+			margin-bottom: 20px;
+		}
+	}
+}

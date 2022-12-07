@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+    head
+        - var seo = {title: 'Товар', description: 'Описание страницы товара', keywords: 'Ключи страницы товара'}
+        include includes/_meta.pug
+    body
+        include includes/_header.pug
+
+        main.main
+            include includes/_breadcrumbs.pug
+
+            include includes/_product.pug
+
+            include includes/_interes.pug
+
+            include includes/_history.pug
+
+        include includes/_footer.pug
+
+        include includes/_svg.pug
+
+        include includes/_modal.pug
+
+        include includes/_scripts.pug
